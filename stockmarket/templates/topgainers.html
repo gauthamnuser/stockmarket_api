@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <script src="{% static 'prediction_app/color-modes.js' %}"></script>
+    <title>Top Gainers</title>    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'prediction_app/basic.css' %}">
+
+  </head>
+
+<body class="d-flex h-100 text-center text-bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">Top Gainers</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="\">Home</a>
+        <a class="nav-link fw-bold py-1 px-0 active" href="topgainers">Top Gainers</a>
+        <a class="nav-link fw-bold py-1 px-0" href="toplosers">Top Losers</a>
+      </nav>
+    </div>
+  </header>
+
+  <br>
+
+  <main class="px-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Name</th>
+          <th scope="col">Change</th>
+          <th scope="col">Price</th>
+          <th scope="col">Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for x in response %}
+        <tr>
+          <td>{{x.symbol}}</th>
+          <td>{{x.name}}</td>
+          <td>{{x.change}}</td>
+          <td>{{x.price}}</td>
+          <td>{{x.changesPercentage}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+  
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>
