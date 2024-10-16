@@ -11,6 +11,15 @@ run the command below to create appropriate tables for the application
 ```
 python manage.py migrate
 ```
+
+# Details
+Framework: Django\
+Database:  MySQL
+
+# API Provider
+Financial Modeling Prep
+
+ 
 # Application
 1:Home Page
 
@@ -28,8 +37,3 @@ url: '/toplosers
 
 url: '/companydetails/{company_symbol}'
 
-
-# Details
-Framework: Django\
-Database:  MySQL
- 
