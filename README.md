@@ -1,6 +1,6 @@
 # stockmarket_api
 
 # Details
-Framework: Django
+Framework: Django\
 Database:  MySQL
  
