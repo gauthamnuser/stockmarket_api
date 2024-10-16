@@ -14,19 +14,19 @@ python manage.py migrate
 # Application
 1:Home Page
 
-url: / \
+url: /
 
 2:Top Gainers
 
-url: /topgainers \
+url: /topgainers
 
 3:Top Losers
 
-url: /toplosers \
+url: /toplosers
 
 4:Company Details
 
-url: /companydetails/{company_symbol} \
+url: /companydetails/{company_symbol}
 
 
 # Details
